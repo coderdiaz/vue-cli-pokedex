@@ -1,0 +1,78 @@
+// Skin for global styles
+body {
+  font-family: $primary-font-family;
+  background-color: lighten($color-marmol, 15%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary-font-family;
+}
+
+// Pokedex filters section
+.pokedex-filters {
+  background: $color-yellow;
+}
+
+// Pokedex detail section
+.pokedex-item {
+  .pokedex-detail__image {
+    background: $color-gray-light;
+    border-radius: 5px;
+  }
+}
+
+// Pokedex tags {
+.pokedex-tag {
+  font-size: 15px;
+  color: $color-white;
+  font-weight: normal;
+  &.pokedex-tag-grass,
+  &.pokedex-tag-Grass {
+    background: $color-tag-grass;
+  }
+  &.pokedex-tag-poison,
+  &.pokedex-tag-Poison {
+    background: $color-tag-poison
+  }
+  &.pokedex-tag-fire,
+  &.pokedex-tag-Fire {
+    background: $color-tag-fire;
+  }
+  &.pokedex-tag-flying,
+  &.pokedex-tag-Flying {
+    background: $color-tag-flying;
+  }
+  &.pokedex-tag-ice,
+  &.pokedex-tag-Ice {
+    background: $color-tag-ice;
+  }
+  &.pokedex-tag-psychic,
+  &.pokedex-tag-Psychic {
+    background: $color-tag-psychic;
+  }
+  &.pokedex-tag-water,
+  &.pokedex-tag-Water {
+    background: $color-tag-water;
+  }
+  &.pokedex-tag-bug,
+  &.pokedex-tag-Bug {
+    background: $color-tag-bug;
+  }
+  &.pokedex-tag-normal,
+  &.pokedex-tag-Normal {
+    background: $color-tag-normal;
+  }
+  &.pokedex-tag-electric,
+  &.pokedex-tag-Electric {
+    background: $color-tag-electric;
+  }
+  &.pokedex-tag-ground,
+  &.pokedex-tag-Ground {
+    background: $color-tag-ground;
+  }
+}

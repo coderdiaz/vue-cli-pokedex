@@ -1,0 +1,24 @@
+// Main file to load sass modules
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+// Variables
+@import 'variables';
+
+// Gettings Bootstrap 4 from node_modules
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Global
+@import 'global/skin';
+@import 'global/skeleton';
+
+// Header
+@import 'header/skin';
+@import 'header/skeleton';
+
+// Footer
+@import 'footer/skin';
+@import 'footer/skeleton';
+
+// Components
+@import 'components/pokedex-card';

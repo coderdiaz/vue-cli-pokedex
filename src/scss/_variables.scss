@@ -1,0 +1,30 @@
+// Variables
+$primary-font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$color-white: #fff;
+$color-black: #000;
+$color-yellow: #e8c547;
+$color-dark: #30323d;
+$color-dark-gray: #4d5061;
+$color-dark-blue: #5c80bc;
+$color-marmol: #cdd1c4;
+$color-gray-light: #e2e2e2;
+$color-gray-darken: #bdb9b8;
+$color-blue-sky: #3dc7ef;
+$color-box-shadow-default: rgba(0, 0, 0, .1);
+
+// Color tags
+$color-tag-grass: #9bcc50;
+$color-tag-poison: #b97fc9;
+$color-tag-fire: #fd7d24;
+$color-tag-flying: linear-gradient(180deg, $color-blue-sky 50%, $color-gray-darken 50%);
+$color-tag-ice: #51c4e7;
+$color-tag-psychic: #f366b9;
+$color-tag-water: #4592c4;
+$color-tag-bug: #729f3f;
+$color-tag-normal: #a4acaf;
+$color-tag-electric: #eed535;
+$color-tag-ground: #f7de3f;
+
+
+// Custom variables Bootstrap
+$font-family-sans-serif: $primary-font-family;

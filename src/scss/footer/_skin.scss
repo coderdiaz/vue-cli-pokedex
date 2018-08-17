@@ -1,0 +1,13 @@
+// Skin for footer styles
+.footer {
+  background: $color-dark;
+  color: $color-white;
+
+  a {
+    text-decoration: none;
+    color: $color-marmol;
+    &:hover {
+      color: lighten($color-marmol, 5%);
+    }
+  }
+}
