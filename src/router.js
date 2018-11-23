@@ -17,7 +17,7 @@ export default new Router({
       component: HomeView
     },
     {
-      path: 'detail/:pokemonName',
+      path: '/detail/:pokemonName',
       name: 'DetailPokemon',
       component: DetailPokemonView
     }
