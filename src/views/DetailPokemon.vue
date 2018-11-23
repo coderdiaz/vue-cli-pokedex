@@ -12,7 +12,7 @@ export default {
 
     // Creating tags for types and weekness
     const pokemonTags = _ => pokemon.type.map(type => <PokedexTag pokemonType={type}></PokedexTag>)
-    const weaknessTags = _ => pokemon.weakness.map((type) => <PokedexTag pokemonType={type}></PokedexTag>)
+    const weaknessTags = _ => pokemon.weakness.map(type => <PokedexTag pokemonType={type}></PokedexTag>)
 
     return <DefaultLayout>
       <section slot="content" class="pokedex-item mt-5">
