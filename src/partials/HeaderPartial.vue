@@ -1,9 +1,9 @@
 <template>
   <header class="header">
-    <div class="container">
-      <nav class="text-center navbar-dark">
-        <router-link class="navbar-brand" :to="{ name: 'Home' }">
-          <img src="../assets/logo_pokemon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    <div class="container mx-auto">
+      <nav class="text-center navigation">
+        <router-link class="navigation__brand" :to="{ name: 'Home' }">
+          <img src="../assets/logo_pokemon.svg" width="30" height="30" class="navigation__logotype" alt="">
           Pokédex Virtual
         </router-link>
       </nav>

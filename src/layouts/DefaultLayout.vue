@@ -8,7 +8,7 @@
     <!-- end filter section -->
     <!-- main -->
     <main class="main-section mb-5">
-      <div class="container">
+      <div class="container mx-auto">
         <slot name="content"></slot>
       </div>
     </main>
