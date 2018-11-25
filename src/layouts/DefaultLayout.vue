@@ -20,13 +20,14 @@
 </template>
 
 <script>
-import HeaderPartial from '@/partials/HeaderPartial'
-import FooterPartial from '@/partials/FooterPartial'
+import HeaderPartial from '@/partials/HeaderPartial.vue';
+import FooterPartial from '@/partials/FooterPartial.vue';
+
 export default {
   name: 'DefaultLayout',
   components: {
     HeaderPartial,
-    FooterPartial
-  }
-}
+    FooterPartial,
+  },
+};
 </script>

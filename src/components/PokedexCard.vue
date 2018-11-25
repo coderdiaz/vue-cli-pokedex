@@ -15,17 +15,18 @@
 </template>
 
 <script>
-import PokedexTag from '@/components/PokedexTag'
+import PokedexTag from '@/components/PokedexTag.vue';
+
 export default {
   name: 'PokedexCard',
   props: {
     pokemon: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   components: {
-    PokedexTag
-  }
-}
+    PokedexTag,
+  },
+};
 </script>

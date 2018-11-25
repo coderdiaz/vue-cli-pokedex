@@ -3,7 +3,12 @@
     <div class="container mx-auto">
       <nav class="text-center navigation">
         <router-link class="navigation__brand" :to="{ name: 'Home' }">
-          <img src="../assets/logo_pokemon.svg" width="30" height="30" class="navigation__logotype" alt="">
+          <img
+            src="../assets/logo_pokemon.svg"
+            width="30"
+            height="30"
+            class="navigation__logotype"
+            alt="">
           Pokédex Virtual
         </router-link>
       </nav>
@@ -13,6 +18,6 @@
 
 <script>
 export default {
-  name: 'HeaderPartial'
-}
+  name: 'HeaderPartial',
+};
 </script>

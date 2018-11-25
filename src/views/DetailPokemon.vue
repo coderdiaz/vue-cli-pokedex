@@ -1,18 +1,21 @@
 <script>
-import DefaultLayout from '@/layouts/DefaultLayout'
-import PokedexTag from '@/components/PokedexTag'
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
+import PokedexTag from '@/components/PokedexTag.vue';
 
 export default {
   name: 'DetailPokemonView',
-  render () {
-    const pokemon = this.$route.params.pokemon
+  render() {
+    const { pokemon } = this.$route.params;
     if (!pokemon) {
-      return this.$router.push({name: 'Home'})
+      return this.$router.push({ name: 'Home' });
     }
 
     // Creating tags for types and weekness
-    const pokemonTags = _ => pokemon.type.map(type => <PokedexTag pokemonType={type}></PokedexTag>)
-    const weaknessTags = _ => pokemon.weakness.map(type => <PokedexTag pokemonType={type}></PokedexTag>)
+    const pokemonTags = () => pokemon.type
+      .map(type => <PokedexTag pokemonType={type}></PokedexTag>);
+
+    const weaknessTags = () => pokemon.weakness
+      .map(type => <PokedexTag pokemonType={type}></PokedexTag>);
 
     return <DefaultLayout>
       <section slot="content" class="pokedex-item mt-5">
@@ -37,10 +40,10 @@ export default {
           </div>
         </div>
       </section>
-    </DefaultLayout>
+    </DefaultLayout>;
   },
   methods: {
-    getUrlThumbnail: (pokemon) => `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.number}.png`
-  }
-}
+    getUrlThumbnail: pokemon => `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.number}.png`,
+  },
+};
 </script>

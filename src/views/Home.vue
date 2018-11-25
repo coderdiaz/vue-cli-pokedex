@@ -12,7 +12,11 @@
                 :value="filter"
                 @input="onSearch"
                 placeholder="Introduce el nombre del pokemon">
-              <small id="emailHelp" class="form-text text-muted">Actualmente solo se pueden hacer búsquedas por nombre</small>
+              <small
+                id="emailHelp"
+                class="form-text text-muted">
+                Actualmente solo se pueden hacer búsquedas por nombre
+              </small>
             </div>
           </div>
         </div>
@@ -31,7 +35,10 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center mt-3">
-          <button v-if="filter === ''" class="btn btn-primary" @click.prevent="showMorePokemon">Cargar más pokemon</button>
+          <button
+            v-if="filter === ''"
+            class="btn btn-primary"
+            @click.prevent="showMorePokemon">Cargar más pokemon</button>
         </div>
       </div>
     </section>
@@ -39,42 +46,43 @@
 </template>
 
 <script>
-import {mapGetters, mapState} from 'vuex'
-import DefaultLayout from '@/layouts/DefaultLayout'
-import PokedexCard from '@/components/PokedexCard'
+import { mapGetters, mapState } from 'vuex';
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
+import PokedexCard from '@/components/PokedexCard.vue';
+
 export default {
   name: 'HomeView',
-  created () {
-    this.$store.dispatch('LOAD_POKEMON_LIST')
+  created() {
+    this.$store.dispatch('LOAD_POKEMON_LIST');
   },
   computed: {
     ...mapGetters([
-      'filteredPokemon'
+      'filteredPokemon',
     ]),
     ...mapState([
-      'filter'
-    ])
+      'filter',
+    ]),
   },
   methods: {
-    showMorePokemon () {
-      this.$store.state.limit += 12
+    showMorePokemon() {
+      this.$store.state.limit += 12;
     },
-    goToDetails (pokemon) {
+    goToDetails(pokemon) {
       this.$router.push({
         name: 'DetailPokemon',
         params: {
           pokemonName: pokemon.slug,
-          pokemon: pokemon
-        }
-      })
+          pokemon,
+        },
+      });
     },
-    onSearch (e) {
-      this.$store.dispatch('QUERY', e.target.value)
-    }
+    onSearch(e) {
+      this.$store.dispatch('QUERY', e.target.value);
+    },
   },
   components: {
     DefaultLayout,
-    PokedexCard
-  }
-}
+    PokedexCard,
+  },
+};
 </script>
