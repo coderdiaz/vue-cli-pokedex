@@ -1,6 +1,8 @@
 <template>
   <div class="pokedex-card">
-    <img class="pokedex-card-img" :src="pokemon.ThumbnailImage"/>
+    <div class="pokedex-thumbnail">
+      <img class="pokedex-card-img" :src="pokemon.ThumbnailImage"/>
+    </div>
     <div class="pokedex-card-details">
       <small class="pokedex-card-details__number">#{{pokemon.number}}</small>
       <h4 class="pokedex-card-details__title">{{pokemon.name}}</h4>
