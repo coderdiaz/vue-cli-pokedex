@@ -1,31 +1,8 @@
 <template>
   <default-layout>
-    <section slot="filters" class="pokedex-filters mb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-6 ml-auto mr-auto">
-            <div class="text-center">
-              <label>Busca a tu pokemon favorito:</label>
-              <input
-                type="text"
-                class="form-control"
-                :value="filter"
-                @input="onSearch"
-                placeholder="Introduce el nombre del pokemon">
-              <small
-                id="emailHelp"
-                class="form-text text-muted">
-                Actualmente solo se pueden hacer búsquedas por nombre
-              </small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section slot="content" class="podexex-items">
-      <div class="row">
-        <div
-          class="col-md-4 col-lg-3 mb-3"
+    <section slot="content" class="text-center">
+      <div class="podexex-items grid-container">
+        <div class="pokedex-item"
           v-for="(item, index) in filteredPokemon"
           :key="index"
           @click.prevent="goToDetails(item)">
@@ -33,14 +10,10 @@
             :pokemon="item"></pokedex-card>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 text-center mt-3">
-          <button
-            v-if="filter === ''"
-            class="btn btn-primary"
-            @click.prevent="showMorePokemon">Cargar más pokemon</button>
-        </div>
-      </div>
+      <button
+        v-if="filter == ''"
+        class="btn__more"
+        @click.prevent="showMorePokemon">Cargar más pokemon</button>
     </section>
   </default-layout>
 </template>
@@ -65,7 +38,7 @@ export default {
   },
   methods: {
     showMorePokemon() {
-      this.$store.state.limit += 12;
+      this.$store.state.limit += 15;
     },
     goToDetails(pokemon) {
       this.$router.push({
@@ -75,9 +48,6 @@ export default {
           pokemon,
         },
       });
-    },
-    onSearch(e) {
-      this.$store.dispatch('QUERY', e.target.value);
     },
   },
   components: {

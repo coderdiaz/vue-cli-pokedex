@@ -7,7 +7,7 @@
     <slot name="filters"></slot>
     <!-- end filter section -->
     <!-- main -->
-    <main class="main-section mb-5">
+    <main class="main-section py-5">
       <div class="container mx-auto">
         <slot name="content"></slot>
       </div>

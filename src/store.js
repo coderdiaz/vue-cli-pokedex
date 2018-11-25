@@ -7,7 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     pokemon: [],
-    limit: 12,
+    limit: 15,
     filter: '',
   },
   actions: {

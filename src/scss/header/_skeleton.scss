@@ -1,0 +1,19 @@
+//
+// Header Skeleton
+
+.header {
+  @apply h-16 flex items-center;
+  .navigation {
+    grid-template-columns: repeat(2, 1fr);
+    @apply list-reset;
+    .navigation__brand {
+      @apply font-semibold text-black;
+      img {
+        @apply align-middle;
+      }
+    }
+    .input__search {
+      @apply p-2 px-3 outline-none;
+    }
+  }
+}

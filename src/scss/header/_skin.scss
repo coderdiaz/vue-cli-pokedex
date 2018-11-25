@@ -1,0 +1,17 @@
+//
+// Header Skin
+
+.header {
+  @apply border-b bg-white;
+  .navigation {
+    .navigation__brand {
+      @apply no-underline;
+    }
+    .input__search {
+      @apply bg-grey-light;
+      &:focus {
+        @apply border-0;
+      }
+    }
+  }
+}
