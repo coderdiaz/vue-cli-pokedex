@@ -1,0 +1,29 @@
+//
+// Global
+
+body {
+  @apply font-sans;
+}
+
+.main-section {
+  @apply bg-grey-lighter;
+}
+
+.btn__more {
+  @apply p-4 px-5 bg-green rounded mt-5 text-white font-semibold;
+}
+
+.podexex-items {
+  grid-template-columns: repeat(5, 1fr);
+  .pokedex-card {
+    transition: all ease .3s;
+    @apply text-center py-4 px-2 rounded;
+    .pokedex-card-img {
+      @apply w-32;
+    }
+
+    &:hover {
+      @apply bg-grey-light;
+    }
+  }
+}

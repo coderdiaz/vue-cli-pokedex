@@ -1,11 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
 // Views
-import HomeView from '@/views/Home'
-import DetailPokemonView from '@/views/DetailPokemon'
+import HomeView from '@/views/Home.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -14,12 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: HomeView
+      component: HomeView,
     },
-    {
-      path: '/detail/:pokemonName',
-      name: 'DetailPokemon',
-      component: DetailPokemonView
-    }
-  ]
-})
+  ],
+});

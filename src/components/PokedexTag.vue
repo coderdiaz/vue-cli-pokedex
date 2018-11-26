@@ -4,23 +4,23 @@ export default {
   props: {
     pokemonType: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  render (h) {
+  render() {
     return <span class={this.getClassTag()}>
       {this.pokemonType}
-    </span>
+    </span>;
   },
   methods: {
-    getClassTag () {
+    getClassTag() {
       return {
         [`pokedex-tag-${this.pokemonType}`]: true,
         'pokedex-tag': true,
-        'badge': true,
-        'mr-2': true
-      }
-    }
-  }
-}
+        badge: true,
+        'mr-2': true,
+      };
+    },
+  },
+};
 </script>
