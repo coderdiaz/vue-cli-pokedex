@@ -14,7 +14,7 @@
     </main>
     <!-- end main -->
     <!-- footer -->
-    <footer-partial></footer-partial>
+    <!-- <footer-partial></footer-partial> -->
     <!-- end footer -->
   </div>
 </template>

@@ -4,8 +4,7 @@
       <div class="podexex-items grid-container">
         <div class="pokedex-item"
           v-for="(item, index) in filteredPokemon"
-          :key="index"
-          @click.prevent="goToDetails(item)">
+          :key="index">
           <pokedex-card
             :pokemon="item"></pokedex-card>
         </div>
@@ -39,15 +38,6 @@ export default {
   methods: {
     showMorePokemon() {
       this.$store.state.limit += 15;
-    },
-    goToDetails(pokemon) {
-      this.$router.push({
-        name: 'DetailPokemon',
-        params: {
-          pokemonName: pokemon.slug,
-          pokemon,
-        },
-      });
     },
   },
   components: {

@@ -6,7 +6,7 @@ body {
 }
 
 .main-section {
-  @apply bg-grey-lightest;
+  @apply bg-grey-lighter;
 }
 
 .btn__more {
@@ -17,13 +17,13 @@ body {
   grid-template-columns: repeat(5, 1fr);
   .pokedex-card {
     transition: all ease .3s;
-    @apply text-center bg-white py-4 px-2 rounded;
+    @apply text-center py-4 px-2 rounded;
     .pokedex-card-img {
       @apply w-32;
     }
 
     &:hover {
-      @apply shadow;
+      @apply bg-grey-light;
     }
   }
 }
